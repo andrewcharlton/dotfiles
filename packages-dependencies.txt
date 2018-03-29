@@ -1,0 +1,8 @@
+# Wifi
+wpa_supplicant
+wpa_actiond
+dialog
+
+# File management
+gvfs
+thunar-volman

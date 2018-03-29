@@ -1,0 +1,103 @@
+# ========================================
+#       Focussing - Super
+# ========================================
+
+alt + Tab
+	bspc node -f next.local
+
+super + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
+super + Tab
+	rofi -show window
+
+super + {1-9,0}
+	bspc desktop -f '^{1-9,10}'
+
+control + alt + {Left,Right}
+	bspc desktop -f {prev,next}
+
+super + {t,f,a}
+	bspc node -t {tiled,fullscreen,floating}
+
+
+
+# ========================================
+#         Moving - Super + Shift
+# ========================================
+
+# swap the node in the given direction
+super + shift + {h,j,k,l}
+	bspc node -s {west,south,north,east}
+
+super + shift + {1-9,0}
+	bspc node -d '^{1-9,10}'
+
+super + shift + {Up,Right,Down,Left}
+	bspc node -p {north,east,south,west}
+
+# cancel the preselection for the focused node
+super + shift + Escape
+	bspc node -p cancel
+
+
+
+# ========================================
+#         Resize - Super + Control
+# ========================================
+
+# expand a window by moving one of its side outward
+super + control + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+
+
+# ========================================
+#              Hotkeys
+# ========================================
+
+# terminal emulator
+super + Return
+	termite
+
+# program launcher
+super + space
+	rofi -show drun
+
+# logout menu
+super + Escape
+	rofi-shutdown
+
+# close and kill
+super + q
+	bspc node -c
+
+# firefox
+super + w
+	firefox
+
+# time
+super + F1
+    show-time
+
+# htop
+super + F2
+    termite --name htop -e 'htop -u nobody' 
+
+# show bank details
+super + F12
+    termite -e "show-balance"
+
+# Volume
+XF86AudioRaiseVolume
+	amixer set Master 5%+
+
+XF86AudioLowerVolume
+	amixer set Master 5%-
+
+XF86AudioMute
+	amixer set Master toggle
+
+# reload config files
+super + shift + Backspace
+	pkill -USR1 -x sxhkd

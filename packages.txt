@@ -1,3 +1,7 @@
+# System
+bbswitch
+bumblebee
+intel-ucode
 
 # Terminal
 termite
@@ -12,3 +16,8 @@ xclip
 
 # Dotfile management
 stow
+
+# File management
+ranger
+thunar
+
