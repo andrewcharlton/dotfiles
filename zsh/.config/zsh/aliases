@@ -1,0 +1,31 @@
+#!bin/zsh
+
+alias nv="nvim"
+
+# Stop cd/ls from going to history
+alias ls=" ls --color=auto --group-directories-first"
+alias cd=" cd"
+
+# Change directory
+alias ~=" cd ~"
+alias ..=" cd .."
+alias ...=" cd ../.."
+alias ....=" cd ../../.."
+alias .....=" cd ../../../.."
+alias ......=" cd ../../../../.."
+
+# Git
+alias g="git"
+alias gs="git status"
+alias gd="git diff"
+alias ga="git add"
+alias gc="git commit -v"
+
+# Clipboard
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
+# Pacman
+alias pacexp='comm -23 <(pacman -Qeq | sort) <(pacman -Qgq base base-devel | sort)'
+alias pacorph='pacman -Qtdq'
+

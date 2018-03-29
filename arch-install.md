@@ -51,3 +51,9 @@ Install:
 As dependencies for netctl. `sudo pacman -S --asdeps wpa_supplicant wpa_actiond dialog`
 
 Enable the netctl-auto service: `sudo systemctl enable netctl-auto@wlp2s0.service` 
+
+## ZSH
+
+Add the following to `/etc/zsh/zshenv`:
+
+```export ZDOTDIR="$HOME/.config/zsh"```

@@ -1,0 +1,18 @@
+#!bin/zsh
+
+autoload -U promptinit; promptinit
+prompt pure
+
+PROMPT_SYMBOL='➤'
+PROMPT='%(?.%F{green}.%F{red})${PROMPT_SYMBOL}%f  '
+
+update_prompt() {
+    PROMPT_SYMBOL=${${KEYMAP/vicmd/"%F{blue}➤"}/(main|viins)/"%F{green}➤"}
+    zle .reset-prompt
+}
+
+function zle-line-init zle-keymap-select { 
+    update_prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select

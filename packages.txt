@@ -1,0 +1,14 @@
+
+# Terminal
+termite
+zsh
+
+# Search
+fzf
+ripgrep
+
+# Clipboard support
+xclip
+
+# Dotfile management
+stow
