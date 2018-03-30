@@ -1,0 +1,5 @@
+rofi.modi:              window,run,drun
+rofi.show-icons:        false
+rofi.terminal:          termite
+rofi.disable-history:   true
+rofi.theme:             .config/rofi/theme.rasi

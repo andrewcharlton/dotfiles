@@ -1,0 +1,56 @@
+window {
+    background-color: #2e344060;
+    transparency: true;
+    fullscreen: true;
+}
+
+mainbox {
+    text-color: #d8dee9;
+    background-color: #2e3440;
+    border-color: #5e81ac;
+    border: 2px solid;
+    margin: 350px 450px;
+    padding: 20px;
+}
+
+inputbar {
+    background-color: inherit;
+    text-color: inherit;
+    padding: 8px;
+}
+
+prompt, entry, case-indicator {
+    background-color: inherit;
+    text-color: inherit;
+    font: "Deva Vu Sans 20";
+}
+
+prompt {
+    enabled: false;
+}
+
+listview {
+    background-color: inherit;
+    text-color: inherit;
+    padding: 5px 0px;
+}
+
+element {
+    background-color: inherit;
+    text-color: #eceff499;
+    padding: 8px;
+    font: "Deva Vu Sans 12";
+}
+
+element.selected.active {
+    background-color: #434c5e;
+    text-color: #5e81ac;
+}
+
+element.selected {
+    background-color: #434c5e;
+}
+
+element.active {
+    text-color: #5e81ac;
+}
