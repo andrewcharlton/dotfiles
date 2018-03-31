@@ -78,11 +78,11 @@ super + w
 
 # time
 super + F1
-    show-time
+    info-panel
 
 # htop
 super + F2
-    termite --name htop -e 'htop -u nobody' 
+    termite --name htop -e 'htop -u nobody'
 
 # show bank details
 super + F12
