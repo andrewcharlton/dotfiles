@@ -1,0 +1,22 @@
+auto-reload yes
+
+color   background          color4      color0
+color   listnormal          color3      color0
+color   listfocus           color3      color10
+color   listnormal_unread   color4      color0
+color   listfocus_unread    color4      color10
+color   info                color4      color2
+color   article             color4      color0
+
+# show-keymap-hint    no
+text-width 100
+
+bind-key    j   down
+bind-key    k   up
+bind-key    ^D  pagedown
+bind-key    ^U  pageup
+
+bind-key    h   prev-feed   articlelist
+bind-key    l   next-feed   articlelist
+bind-key    h   prev        article
+bind-key    l   next        article
