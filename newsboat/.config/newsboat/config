@@ -1,15 +1,18 @@
 auto-reload yes
 
-color   background          color4      color0
-color   listnormal          color3      color0
-color   listfocus           color3      color10
-color   listnormal_unread   color4      color0
-color   listfocus_unread    color4      color10
-color   info                color4      color2
-color   article             color4      color0
+color   background          default     default
+color   listnormal          color0      default
+color   listfocus           color0      color4
+color   listnormal_unread   default     default
+color   listfocus_unread    default     color4      bold
+color   info                default     color0
+color   article             default     default
 
-# show-keymap-hint    no
+show-keymap-hint    no
+swap-title-and-hints yes
 text-width 100
+
+browser     "firefox --new-tab %u"
 
 bind-key    j   down
 bind-key    k   up
