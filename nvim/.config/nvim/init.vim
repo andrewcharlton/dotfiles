@@ -41,6 +41,7 @@ let g:LanguageClient_serverCommands = {}
 
 " Language Specific
 source $XDG_CONFIG_HOME/nvim/go.vim
+source $XDG_CONFIG_HOME/nvim/python.vim
 source $XDG_CONFIG_HOME/nvim/typescript.vim
 
 call plug#end()
