@@ -3,7 +3,15 @@
 alias nv="nvim"
 
 # Stop cd/ls from going to history
-alias ls=" ls --color=auto --group-directories-first"
+case `uname` in
+Darwin)
+    alias ls=" ls -G"
+    ;;
+Linux)
+    alias ls=" ls --color=auto --group-directories-first"
+    ;;
+esac
+
 alias cd=" cd"
 
 # Change directory
