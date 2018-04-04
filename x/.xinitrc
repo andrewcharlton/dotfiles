@@ -7,6 +7,7 @@ fi
 
 setxkbmap gb
 xsetroot -cursor_name left_ptr
+eval $(ssh-agent)
 
 nitrogen --restore &
 compton &
