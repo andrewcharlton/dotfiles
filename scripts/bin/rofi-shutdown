@@ -1,0 +1,17 @@
+#!/bin/bash
+
+res=$(echo "restart|logout|suspend|shutdown" | rofi -lines 4 -sep "|" -dmenu -p "Shutdown:")
+
+if [ "$res" = "logout" ]; then
+    bspc quit
+fi
+if [ "$res" = "suspend" ]; then
+    systemctl suspend
+fi
+if [ "$res" = "restart" ]; then
+    systemctl reboot
+fi
+if [ "$res" = "shutdown" ]; then
+    systemctl poweroff
+fi
+exit 0

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo -e "\nDocuments..."
+rsync -av --modify-window=5 --safe-links --delete $HOME/documents/ /run/media/andy/ACHARLTON/sync/documents/
+
+echo -e "\nMusic..."
+rsync -av --modify-window=5 --safe-links --delete $HOME/music/ /run/media/andy/ACHARLTON/sync/music/
+
+echo -e "\nPictures..."
+rsync -av --modify-window=5 --safe-links --delete $HOME/pictures/ /run/media/andy/ACHARLTON/sync/pictures/
+
+echo -e "\nVideos..."
+rsync -av --modify-window=5 --safe-links --delete $HOME/videos/ /run/media/andy/ACHARLTON/sync/videos/
