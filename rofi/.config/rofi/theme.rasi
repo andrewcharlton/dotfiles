@@ -1,5 +1,5 @@
 window {
-    background-color: #2e344060;
+    background-color: #2e344080;
     transparency: true;
     fullscreen: true;
 }
@@ -9,7 +9,7 @@ mainbox {
     background-color: #2e3440;
     border-color: #5e81ac;
     border: 2px solid;
-    margin: 350px 450px;
+    margin: 400px 550px;
     padding: 20px;
 }
 
@@ -22,7 +22,7 @@ inputbar {
 prompt, entry, case-indicator {
     background-color: inherit;
     text-color: inherit;
-    font: "Deva Vu Sans 20";
+    font: "Deva Vu Sans 14";
 }
 
 prompt {
@@ -39,7 +39,7 @@ element {
     background-color: inherit;
     text-color: #eceff499;
     padding: 8px;
-    font: "Deva Vu Sans 12";
+    font: "Deva Vu Sans 11";
 }
 
 element.selected.active {

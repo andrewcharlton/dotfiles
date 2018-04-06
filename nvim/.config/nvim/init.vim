@@ -5,7 +5,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Navigation
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'francoiscabrol/ranger.vim'
+
 
 " Search
 Plug 'junegunn/fzf'
@@ -41,6 +44,8 @@ let g:LanguageClient_serverCommands = {}
 
 " Language Specific
 source $XDG_CONFIG_HOME/nvim/go.vim
+source $XDG_CONFIG_HOME/nvim/html.vim
+source $XDG_CONFIG_HOME/nvim/json.vim
 source $XDG_CONFIG_HOME/nvim/python.vim
 source $XDG_CONFIG_HOME/nvim/typescript.vim
 
@@ -69,6 +74,9 @@ let g:airline_section_b = ''
 let g:airline_section_x = ''
 let g:airline_section_y = airline#section#create(['branch'])
 let g:airline_section_z = airline#section#create(['tagbar', 'filetype'])
+
+" Ranger
+let g:ranger_replace_netrw = 1
 
 " Nerdtree
 let g:NERDTreeHighlightCursorLine=0
