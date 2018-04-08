@@ -1,1 +1,4 @@
 .zcompdump
+
+packages/.local/packages/base/*
+!packages/.local/packages/base/PKGBUILD

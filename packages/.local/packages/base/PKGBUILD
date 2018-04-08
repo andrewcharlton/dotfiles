@@ -1,0 +1,84 @@
+pkgname=@base
+pkgver=1
+pkgrel=1
+pkgdesc="All packages needed to keep system functioning"
+epoch=
+arch=(x86_64)
+url=""
+license=('GPL')
+groups=()
+depends=(
+    # Hardware
+    bbswitch
+    bumblebee
+    intel-ucode
+
+    # X
+    xorg-server
+    xorg-xinit
+    xorg-xsetroot
+
+    # Base System
+    bspwm
+    compton
+    dunst
+    rofi
+    sxhkd
+    termite
+    zsh
+
+    # Utils
+    acpi
+    alsa-utils
+    htop
+    nitrogen
+    openssh
+    stow
+
+    # Theme
+    arc-gtk-theme
+    arc-icon-theme
+    xcursor-comix
+
+    # Fonts
+    adobe-source-code-pro-fonts
+    awesome-terminal-fonts
+    tex-gyre-fonts
+    ttf-inconsolata
+    ttf-dejavu
+    ttf-roboto
+
+    # Python
+    autopep8
+    flake8
+    python
+    python-jedi
+    python-pycodestyle
+    python-pylint
+
+    # Node
+    nodejs
+    npm
+    yarn
+)
+makedepends=()
+checkdepends=()
+optdepends=()
+provides=(gsfonts)
+conflicts=(gsfonts)
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+noextract=()
+md5sums=()
+validpgpkeys=()
+
+build() {
+    echo "Nothing to build"
+}
+
+package() {
+    echo "Nothing to package"
+}
