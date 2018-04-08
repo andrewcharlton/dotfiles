@@ -7,7 +7,7 @@ vol=$(amixer get Master | tail -n 1 | cut -d '[' -f 2 | cut -d ']' -f 1)
 
 if [ "$status" == "Off" ]
 then
-    notify-send "Volume" "" -h int:value:0
+    notify-send "Volume" "" -h int:value:0 -u low
 else
-    notify-send "Volume" "" -h int:value:"$vol"
+    notify-send "Volume" "" -h int:value:"$vol" -u low
 fi
