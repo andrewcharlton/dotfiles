@@ -1,0 +1,13 @@
+#!/bin/sh
+
+amixer set Master $1
+
+status=$(amixer get Master | tail -n 1 | cut -d '[' -f 4 | cut -d ']' -f 1 | sed s/o/O/)
+vol=$(amixer get Master | tail -n 1 | cut -d '[' -f 2 | cut -d ']' -f 1)
+
+if [ "$status" == "Off" ]
+then
+    notify-send "Volume" "" -h int:value:0
+else
+    notify-send "Volume" "" -h int:value:"$vol"
+fi
