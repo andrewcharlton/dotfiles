@@ -6,7 +6,10 @@ command! Wq wq
 command! WQ wq
 command! Q q
 
-" Search with ripgrep 
+" Close buffer without closing split
+command! Bd bp\|bd \#
+
+" Search with ripgrep
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
