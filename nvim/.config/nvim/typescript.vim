@@ -20,7 +20,8 @@ endfunction
 
 augroup typescript
     autocmd!
-    autocmd BufNewFile *.tsx 0r ~/.config/nvim/templates/skeleton.tsx
+    autocmd BufNewFile *.tsx  0r ~/.config/nvim/templates/skeleton.tsx
+    autocmd BufNewFile *.test.tsx 0r ~/.config/nvim/templates/skeleton.test.tsx
     autocmd BufNewFile,BufRead *.tsx set filetype=typescript
 
     autocmd Filetype typescript nnoremap <silent> <localleader>t :<C-U>call Jest()<CR>

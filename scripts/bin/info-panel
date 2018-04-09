@@ -25,4 +25,4 @@ then
     batt="$batt\t($remaining remaining)"
 fi
 
-notify-send Status "$t\n$vol\n$batt"
+notify-send Status "\n$t\n$vol\n$batt"

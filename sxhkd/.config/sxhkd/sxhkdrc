@@ -90,14 +90,14 @@ super + F12
 
 # Volume
 XF86AudioRaiseVolume
-	amixer set Master 5%+
+    change-volume 5%+
 
 XF86AudioLowerVolume
-	amixer set Master 5%-
+    change-volume 5%-
 
 XF86AudioMute
-	amixer set Master toggle
+    change-volume toggle
 
 # reload config files
 super + shift + Backspace
-	pkill -USR1 -x sxhkd
+	pkill -USR1 sxhkd
