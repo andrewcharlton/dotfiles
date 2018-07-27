@@ -34,6 +34,7 @@ depends=(
     nitrogen
     openssh
     stow
+    unzip
 
     # Theme
     arc-gtk-theme
@@ -55,6 +56,9 @@ depends=(
     python-jedi
     python-pycodestyle
     python-pylint
+    python-pytest
+    python-rope
+    python-language-server
 
     # Node
     nodejs

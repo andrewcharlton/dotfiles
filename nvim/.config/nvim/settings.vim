@@ -10,7 +10,6 @@ set gdefault    " Replace all occurences on line by default
 " Editing
 set autoindent
 set smartindent
-set showbreak='»'
 set nojoinspaces
 
 " Disable modeline
@@ -52,3 +51,8 @@ set signcolumn=yes
 " Conceal
 set conceallevel=2
 set concealcursor="nic"
+
+" Wrapping
+set wrap
+set lbr
+let &showbreak = '» '

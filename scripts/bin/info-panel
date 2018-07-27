@@ -3,6 +3,9 @@
 t=$(date +"%H:%M")
 t="Time:\t\t$t"
 
+d=$(date +"%a %d %b %Y")
+d="Date:\t\t\t$d"
+
 volstatus=$(amixer get Master | tail -n 1 | cut -d '[' -f 4 | cut -d ']' -f 1 | sed s/o/O/)
 vollevel=$(amixer get Master | tail -n 1 | cut -d '[' -f 2 | cut -d ']' -f 1)
 vol="Volume:"
@@ -25,4 +28,4 @@ then
     batt="$batt\t($remaining remaining)"
 fi
 
-notify-send Status "\n$t\n$vol\n$batt"
+notify-send Status "\n$t\n$d\n$vol\n$batt"
