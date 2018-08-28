@@ -42,7 +42,7 @@ set scrolloff=50
 
 " Appearance
 set background=dark
-colorscheme nord-custom
+colorscheme nord
 set termguicolors
 set noshowmode
 set nonumber

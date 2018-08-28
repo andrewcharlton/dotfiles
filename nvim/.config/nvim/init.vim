@@ -27,13 +27,12 @@ Plug 'airblade/vim-gitgutter'
 
 " Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'roxma/nvim-completion-manager'
 
 " Linting
 Plug 'w0rp/ale'
 
 " Language Server
-Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'Shougo/echodoc.vim'
 
 " Variables that need to be initialised before sourcing language files
@@ -130,4 +129,7 @@ let g:ale_set_quickfix = 1
 " Language Server
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_diagnosticsEnable = 0
+
+" Goyo
+let g:goyo_width = 120
 

@@ -31,4 +31,4 @@ bspc config pointer_action2         resize_side
 
 # Rules
 bspc rule --add Termite:htop state=floating rectangle=620x170+1260+40
-
+bspc rule --add Chromium:Authy state=floating
