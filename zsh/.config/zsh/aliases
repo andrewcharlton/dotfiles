@@ -37,3 +37,5 @@ alias pbpaste='xclip -selection clipboard -o'
 alias pacexp='comm -23 <(pacman -Qeq | sort) <(pacman -Qgq base base-devel | sort)'
 alias pacorph='pacman -Qtdq'
 
+# Sync
+alias sync-pictures='aws s3 sync ~/pictures s3://acharlton-personal-backup/pictures'

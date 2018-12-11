@@ -1,12 +1,16 @@
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript'
+Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 
 let g:ale_linters['typescript'] = ['tslint', 'prettier', 'tsserver']
+let g:ale_linters['typescript.tsx'] = ['tslint', 'prettier', 'tsserver']
+
 let g:ale_fixers['typescript'] = ['tslint', 'prettier']
+let g:ale_fixers['typescript.tsx'] = ['tslint', 'prettier']
 
 let g:ale_pattern_options['node_modules'] = { 'ale_enabled': 0 }
 
 let g:LanguageClient_serverCommands['typescript'] = ['typescript-language-server', '--stdio']
+let g:LanguageClient_serverCommands['typescript.tsx'] = ['typescript-language-server', '--stdio']
 
 " Run jest for current file. Assumes test file will be named *.test.ts*
 function! Jest()

@@ -24,11 +24,12 @@ bspc config paddingless_monocle	    false
 bspc config single_monocle	        true
 
 # Mouse
-bspc config click_to_focus		    true
+bspc config click_to_focus		    button1
 bspc config pointer_modifier        mod4
 bspc config pointer_action1         move
 bspc config pointer_action2         resize_side
 
 # Rules
 bspc rule --add Termite:htop state=floating rectangle=620x170+1260+40
-bspc rule --add Chromium:Authy state=floating
+bspc rule --add Chromium state=floating
+bspc rule --add Zathura state=tiled

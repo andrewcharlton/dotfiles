@@ -9,7 +9,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'francoiscabrol/ranger.vim'
 
-
 " Search
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -46,6 +45,7 @@ source $XDG_CONFIG_HOME/nvim/go.vim
 source $XDG_CONFIG_HOME/nvim/html.vim
 source $XDG_CONFIG_HOME/nvim/json.vim
 source $XDG_CONFIG_HOME/nvim/python.vim
+source $XDG_CONFIG_HOME/nvim/rust.vim
 source $XDG_CONFIG_HOME/nvim/typescript.vim
 
 call plug#end()
@@ -131,5 +131,5 @@ let g:LanguageClient_autoStart = 1
 let g:LanguageClient_diagnosticsEnable = 0
 
 " Goyo
-let g:goyo_width = 120
+let g:goyo_width = 100
 

@@ -5,3 +5,9 @@ let g:ale_fixers['python'] = ['autopep8']
 let g:ale_python_pylint_change_directory = 0
 
 let g:LanguageClient_serverCommands['python'] = ['pyls']
+
+augroup Python
+    autocmd!
+    autocmd Filetype python nnoremap <silent> <localleader>p :!python %<CR>
+augroup End
+

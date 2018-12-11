@@ -55,4 +55,7 @@ set concealcursor="nic"
 " Wrapping
 set wrap
 set lbr
-let &showbreak = '» '
+let &showbreak = ''
+
+" Spellcheck
+set spelllang=en_gb
