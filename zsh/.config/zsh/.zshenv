@@ -3,10 +3,12 @@ export BROWSER=/usr/bin/firefox
 
 export XDG_CONFIG_HOME="$HOME/.config/"
 
-export GOPATH="$HOME/.go"
+export GOPATH="$HOME/.go:$HOME"
+export GO111MODULE=on
+
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
-export PATH="$PATH:$HOME/.go/bin:$HOME/.cargo/bin:$HOME/.local/scripts:$HOME/.yarn/bin"
+export PATH="$PATH:$HOME/bin:$HOME/.go/bin:$HOME/.cargo/bin:$HOME/.local/scripts:$HOME/.yarn/bin"
 
 export LS_COLORS="di=33:fi=0:ln=34:ex=31"
 

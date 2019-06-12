@@ -7,7 +7,6 @@ Plug 'vim-airline/vim-airline-themes'
 " Navigation
 Plug 'scrooloose/nerdtree'
 Plug 'rbgrouleff/bclose.vim'
-Plug 'francoiscabrol/ranger.vim'
 
 " Search
 Plug 'junegunn/fzf'
@@ -31,8 +30,6 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'w0rp/ale'
 
 " Language Server
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
-Plug 'Shougo/echodoc.vim'
 
 " Variables that need to be initialised before sourcing language files
 let g:ale_linters = {}
@@ -108,6 +105,12 @@ let g:fzf_colors =
 " Autocompletion
 let g:deoplete#enable_at_startup = 1
 set completeopt-=preview
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+
+" Snippets
+let g:neosnippet#disable_runtime_snippets = {
+\   '_' : 1,
+\ }
 
 " Git
 let g:gitgutter_map_keys = 0
@@ -127,9 +130,9 @@ let g:ale_sign_style_error = '✖'
 let g:ale_set_quickfix = 1
 
 " Language Server
-let g:LanguageClient_autoStart = 1
-let g:LanguageClient_diagnosticsEnable = 0
+" let g:LanguageClient_autoStart = 1
+" let g:LanguageClient_diagnosticsEnable = 0
 
 " Goyo
-let g:goyo_width = 100
+let g:goyo_width = 80
 

@@ -69,14 +69,4 @@ map <silent> <leader>h :echo synIDattr(synID(line("."),col("."),1),"name")<CR>
 
 let maplocalleader = "\\"
 
-" General Language Client
-nnoremap <silent> <localleader>d :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> <localleader>f :call LanguageClient_textDocument_formatting()<CR>
-vnoremap <silent> <localleader>f :call LanguageClient_textDocument_rangeFormatting()<CR>
-nnoremap <silent> <localleader>h :call LanguageClient_textDocument_hover()<CR>
-nnoremap <silent> <localleader>r :call LanguageClient_textDocument_rename()<CR>
-nnoremap <silent> <localleader>s :call LanguageClient_textDocument_documentSymbol()<CR>
-nnoremap <silent> <localleader>S :call LanguageClient_workspace_symbol()<CR>
-nnoremap <silent> <localleader>u :call LanguageClient_textDocument_references()<CR>
-
 
