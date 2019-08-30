@@ -1,8 +1,8 @@
 call plug#begin('$HOME/.local/share/nvim/plugged')
 
 " Appearance
+Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 
 " Navigation
 Plug 'scrooloose/nerdtree'
@@ -24,7 +24,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " Autocomplete
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
 " Linting
 Plug 'w0rp/ale'
@@ -44,6 +44,7 @@ source $XDG_CONFIG_HOME/nvim/json.vim
 source $XDG_CONFIG_HOME/nvim/python.vim
 source $XDG_CONFIG_HOME/nvim/rust.vim
 source $XDG_CONFIG_HOME/nvim/typescript.vim
+source $XDG_CONFIG_HOME/nvim/yaml.vim
 
 call plug#end()
 
@@ -56,6 +57,9 @@ augroup terminal
     autocmd!
     autocmd BufEnter * if &buftype == 'terminal' | :startinsert | endif
 augroup end
+
+" Nord
+let g:nord_comment_brightness=1
 
 " Airline
 let g:airline_theme='nord'
@@ -103,9 +107,6 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 
 " Autocompletion
-let g:deoplete#enable_at_startup = 1
-set completeopt-=preview
-call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
 " Snippets
 let g:neosnippet#disable_runtime_snippets = {
@@ -129,10 +130,6 @@ let g:ale_sign_style_warning = '⚠'
 let g:ale_sign_style_error = '✖'
 let g:ale_set_quickfix = 1
 
-" Language Server
-" let g:LanguageClient_autoStart = 1
-" let g:LanguageClient_diagnosticsEnable = 0
-
 " Goyo
-let g:goyo_width = 80
+let g:goyo_width = 120
 

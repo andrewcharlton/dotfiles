@@ -28,6 +28,8 @@ set foldnestmax=10
 " Window options
 set splitright
 set splitbelow
+set signcolumn=yes
+set cmdheight=2
 
 " Swap / Backup dir
 set nowritebackup

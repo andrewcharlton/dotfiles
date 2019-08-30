@@ -54,7 +54,17 @@ nnoremap <silent> <leader>gc :Gcommit<CR>
 nnoremap <silent> <leader>gd :Gvdiff<CR>
 
 " Autocomplete with tab
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 " Misc
 nnoremap <silent> <leader>e :FZF ~/.config/nvim<CR>
@@ -68,5 +78,12 @@ map <silent> <leader>h :echo synIDattr(synID(line("."),col("."),1),"name")<CR>
 " ==============================================================================
 
 let maplocalleader = "\\"
+
+" Language Server
+nmap <silent> <localleader>d <Plug>(coc-definition)
+nmap <silent> <localleader>y <Plug>(coc-type-definition)
+nmap <silent> <localleader>i <Plug>(coc-implementation)
+nmap <silent> <localleader>f <Plug>(coc-rename)
+nmap <silent> <localleader>u <Plug>(coc-references)
 
 

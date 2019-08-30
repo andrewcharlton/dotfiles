@@ -9,7 +9,8 @@ setxkbmap gb
 xsetroot -cursor_name left_ptr
 eval $(ssh-agent)
 
-nitrogen --restore &
-compton &
-sxhkd &
-exec bspwm
+/* nitrogen --restore & */
+/* compton & */
+/* sxhkd & */
+/* exec bspwm */
+exec startxfce4

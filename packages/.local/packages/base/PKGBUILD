@@ -16,13 +16,11 @@ depends=(
     # X
     xorg-server
     xorg-xinit
-    xorg-xsetroot
 
     # Base System
+    xfce4
     bspwm
     compton
-    dunst
-    rofi
     sxhkd
     termite
     zsh
@@ -31,9 +29,9 @@ depends=(
     acpi
     alsa-utils
     htop
-    nitrogen
     openssh
     stow
+    zip
     unzip
 
     # Theme
@@ -59,11 +57,6 @@ depends=(
     python-pytest
     python-rope
     python-language-server
-
-    # Node
-    nodejs
-    npm
-    yarn
 )
 makedepends=()
 checkdepends=()

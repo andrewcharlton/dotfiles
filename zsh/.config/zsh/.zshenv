@@ -8,7 +8,7 @@ export GO111MODULE=on
 
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
-export PATH="$PATH:$HOME/bin:$HOME/.go/bin:$HOME/.cargo/bin:$HOME/.local/scripts:$HOME/.yarn/bin"
+export PATH="$PATH:$HOME/bin:$HOME/.go/bin:$HOME/.cargo/bin:$HOME/.local/scripts:$HOME/.local/bin:$HOME/.yarn/bin"
 
 export LS_COLORS="di=33:fi=0:ln=34:ex=31"
 
